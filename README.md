@@ -1,21 +1,18 @@
 # Search engine
-
-
-#### Build
+#### Steps to run
+* Build app 
 ```bash
-./scripts/build.sh
+./scripts/setup.sh
 ```
-
-#### Run
+* Start server
 ```
 go run main.go
 ```
-
-####  Interact
-Can test service by running micro cli commands:
+* Send requests 
 ```bash
-micro cli 
-
+>>> ./scripts/start_cli.sh
+micro> call search Indexer.Index {"url": "http://<ENTER URL>"}
+micro> call search Indexer.Search {"word": "<ENTER WORD>"}
 ```
 
 
